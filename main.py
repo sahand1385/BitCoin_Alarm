@@ -1,3 +1,5 @@
+#Open with double click on source or you CMD. Do NOT run with idle or ...
+
 import cryptocompare
 from playsound import playsound
 from colorama import init, AnsiToWin32, Fore, Back
