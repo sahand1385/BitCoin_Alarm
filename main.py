@@ -31,6 +31,7 @@ print(Fore.WHITE,file=stream)
 #Made By Sahand Sabet (Sa-Sa.ir)
 mini = int(input("  => Minimum price: "))
 maxi = int(input("  => Maximum price: "))
+time = int(input("  => Time to sleep: "))
 os.system('cls')
 print_sasa();
 #Made By Sahand Sabet (Sa-Sa.ir)
@@ -45,7 +46,7 @@ while True:
         playsound('audio.mp3')
     else :
         print(Fore.GREEN," => BitCoin Price:",BTC,file=stream)
-    sleep(10)
+    sleep(time)
     os.system('cls')
     print_sasa();
     #Made By Sahand Sabet (Sa-Sa.ir)
