@@ -29,9 +29,9 @@ BTC = cryptocompare.get_price('BTC',curr='USD')["BTC"]["USD"]
 print(Fore.YELLOW," => BitCoin Price:",BTC,file=stream)
 print(Fore.WHITE,file=stream)
 #Made By Sahand Sabet (Sa-Sa.ir)
-mini = int(input("  => Minimum price: "))
-maxi = int(input("  => Maximum price: "))
-time = int(input("  => Time to sleep: "))
+mini = int(input("  => Minimum price   : "))
+maxi = int(input("  => Maximum price   : "))
+time = int(input("  => Sleeping time(S): "))
 os.system('cls')
 print_sasa();
 #Made By Sahand Sabet (Sa-Sa.ir)
