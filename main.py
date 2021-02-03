@@ -38,10 +38,7 @@ print_sasa();
 
 while True:
     BTC = cryptocompare.get_price('BTC',curr='USD')["BTC"]["USD"]
-    if BTC >= maxi:
-        print(Fore.RED," => BitCoin Price:",BTC,file=stream)
-        playsound('audio.mp3')
-    elif BTC <= mini:
+    if BTC >= maxi or BTC <= mini:
         print(Fore.RED," => BitCoin Price:",BTC,file=stream)
         playsound('audio.mp3')
     else :
