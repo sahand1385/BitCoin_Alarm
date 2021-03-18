@@ -5,6 +5,7 @@ from playsound import playsound
 from colorama import init, AnsiToWin32, Fore, Back
 import os
 from time import sleep
+from tkinter import messagebox
 import sys
 #Made By Sahand Sabet (Sa-Sa.ir)
 
@@ -12,6 +13,20 @@ os.system('cls')
 init(wrap=False)
 stream = AnsiToWin32(sys.stderr).stream
 #Made By Sahand Sabet (Sa-Sa.ir)
+
+def s_message(kind,title,msg):
+    f = open("Source/Data/logs.txt", "a+")
+    f.write(str(msg)+"\n")
+    f.close()
+    root = tk.Tk()
+    root.withdraw()
+    if kind == "Error":
+        messagebox.showerror(str(title), str(msg))
+    elif kind == "Info":
+        messagebox.showinfo(str(title), str(msg))
+    elif kind == "Warning":
+        messagebox.showwarning(str(title), str(msg))
+    root.destroy()
 
 def print_sasa():
     print(Fore.CYAN,"""
@@ -41,6 +56,7 @@ while True:
     if BTC >= maxi or BTC <= mini:
         print(Fore.RED," => BitCoin Price:",BTC,file=stream)
         playsound('audio.mp3')
+        s_message("Warning","Bitcoin Price","Bitcoin Price Got A Change .")
     else :
         print(Fore.GREEN," => BitCoin Price:",BTC,file=stream)
     sleep(time)
